@@ -1,1 +1,1 @@
-# 100x-Devs---cohort-2
+# 100x-Devs-cohort-2
