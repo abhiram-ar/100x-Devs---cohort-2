@@ -34,9 +34,9 @@ function getSlice(str, start, end) {
 getSlice("Hello World", 0, 5);
 
 // substring
-function getSubstring(str, start, end) {
+function getSubstring(str, start, length) {
   console.log("Original String:", str);
-  console.log("After substring:", str.substring(start, end));
+  console.log("After substring:", str.substring(start, length));
 }
 getSubstring("Hello World", 0, 5);
 
