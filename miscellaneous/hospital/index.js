@@ -51,6 +51,12 @@ app.put("/", (req, res) => {
 });
 
 app.delete("/", (req, res) => {
+    if(user[0].kidneys.filter((kidney) => kidney.healthly === false).length === 0){
+        res.status(400).json({
+            message: "All kidneys are healthy"
+        })
+    }
+
   user[0].kidneys = user[0].kidneys.filter(
     (kidney) => kidney.healthly === true
   );
