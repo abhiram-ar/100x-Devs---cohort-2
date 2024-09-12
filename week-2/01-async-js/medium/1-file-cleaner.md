@@ -11,3 +11,16 @@ After the program runs, the output should be
 ```
 hello world my name is raman
 ```
+
+
+```javascript
+let fs = require("fs")
+
+fs.readFile("a.txt", "utf-8" ,(error, data)=>{
+  if(error) throw error
+  console.log("read sucess")
+  console.log(data)
+
+  let newdata = data.replace(/\s+/g, ' ');
+  console.log(newdata)
+})
