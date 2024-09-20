@@ -17,14 +17,12 @@ function wait3(t) {
     return new Promise(resolve=> setTimeout(resolve, t*1000))
 }
 
- function calculateTime(t1, t2, t3) {
-    return new Promise(resolve => {
-        let time1 = Date.now()
-        wait1(t1).then(()=>wait2(t2)).then(()=> wait3(t3)).then(()=>{
+function calculateTime(t1, t2, t3) {
+    let time1 = Date.now()
+    return wait1(t1).then(()=>wait2(t2)).then(()=> wait3(t3)).then(()=>{
             let time2= Date.now()
             return time2-time1;
         })
-    })
 }
 
 module.exports = calculateTime;
